@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 
-constexpr double TH_NORM = 4.0;
+constexpr double TH_NORM = 1.0;
 constexpr unsigned MAX_ITER = 1000;
 
 using namespace std;
@@ -71,9 +71,9 @@ vector<unsigned> CreateFractalSeq(const double cx, const double cy,
 int main(int argc, char *argv[]) {
   if (argc != 6) {
     cerr << "Wrong input parameters" << endl;
-    cerr << "Usage: ./AdrM <cx> <cy> <size> <output_file> <1-seq or 1-pal>"
+    cerr << "Usage: ./Escape_Time <cx> <cy> <size> <output_file> <0-seq or 1-pal>"
          << endl;
-    cerr << "   Ex: ./AdrM -0.74797 -0.072500001 1024 fractal.dat 1" << endl;
+    cerr << "   Ex: ./Escape_Time 0.2932 -0.6843 4096 fractal.dat 1" << endl;
     return -1;
   }
 
