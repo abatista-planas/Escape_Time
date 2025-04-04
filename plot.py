@@ -2,15 +2,11 @@ import argparse
 import matplotlib.pyplot as plt
 import numpy as np
 from math import sqrt
-from matplotlib.colors import LightSource, Normalize
+from matplotlib.colors import LightSource
 import matplotlib as mpl
-import struct
-from matplotlib import colors
-import math
 
 
 def show_data(ax, data, cmap, useLog: bool = False, save_img="", title=""):
-
     if useLog:
         data = np.log(data)
 
@@ -31,7 +27,6 @@ def show_data(ax, data, cmap, useLog: bool = False, save_img="", title=""):
 
 
 def load_data(fname):
-
     with open(fname, "rb") as ifile:
         data = np.frombuffer(buffer=ifile.read(), dtype=np.uint32)
         S = int(sqrt(data.size))
@@ -41,7 +36,7 @@ def load_data(fname):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("fname", type=str, help="Input file")
-    parser.add_argument("--cmap", type=str, default="jet", help="Colormap")
+    parser.add_argument("--cmap", type=str, default="hot_r", help="Colormap")
     parser.add_argument("--log", help="Use log scale", action="store_true")
     parser.add_argument("--save_img", help="Save image", default="")
     FLAGS, unparsed_args = parser.parse_known_args()
@@ -55,7 +50,7 @@ if __name__ == "__main__":
         ax=plt.gca(),
         data=data,
         cmap=FLAGS.cmap,
-        title="Fractal",
+        title="Mandelbrot's Fractal",
         useLog=FLAGS.log,
         save_img=FLAGS.save_img,
     )
