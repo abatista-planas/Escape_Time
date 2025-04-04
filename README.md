@@ -38,7 +38,7 @@ python3 plot.py output_data.dat
 ## Authors
 
 Adrian Batista
-ex. [Linkedin](www.linkedin.com/in/adrian-batista-aab275169)
+[Linkedin](www.linkedin.com/in/adrian-batista-aab275169)
 
 ## Acknowledgments
 - Roberto Carlos Cruz
