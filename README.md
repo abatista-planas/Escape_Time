@@ -1,6 +1,6 @@
 # Escape Time Fractal
 
-The simplest algorithm for generating visual representations of the Mandelbrot set is the escape-time algorithm. 
+The escape-time algorithm for generating visual representations of the Mandelbrot set. 
 
 ![alt text](./assets/Fractal.png)
 ## Description
