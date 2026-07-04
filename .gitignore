@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+Escape_Time
+
+# CMake build directory
+build/
+
+# Generated fractal data / images
+*.dat
+*.fits
